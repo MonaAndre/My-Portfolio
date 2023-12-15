@@ -1,0 +1,94 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "mixins";
+@import "variables";
+@import "myprojects";
+
+body {
+  @include box-sizing;
+  background-color: $primary-drown;
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: white;
+}
+
+section {
+  min-height: 100vh;
+}
+header {
+  min-height: 100vh;
+  position: relative;
+
+  .menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: rgb(174, 169, 169);
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    background-color: $primary-dark;
+    @include tablet{
+      position: static;
+     
+    }
+    i {
+     
+      font-size: 3rem;
+    }
+    
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      
+    }
+    &__link {
+      transition: all 0.3s ease;
+      &-text{
+        display: none;
+
+      }
+    }
+    &__link:hover {
+      color: white;
+    }
+  }
+  .info {
+    color: $primary-beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      padding: 50px;
+    }
+    &__img {
+      display: block;
+      max-width: 12rem;
+      height: auto;
+      border-radius: 50px 0px;
+      @include tablet {
+        max-width: 17rem;
+      }
+      @include desktop {
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+i {
+  color: $primary-darkpink;
+
+}
+

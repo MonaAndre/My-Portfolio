@@ -1,13 +1,114 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="menu">
+      <div class="container">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="mailto:monaelizabet@gmail.com"><i class="bi bi-envelope-plus"></i></a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#info"><i class="bi bi-person-circle"></i>
+              <p class="menu__link-text">
+                About me
+              </p>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link">
+              <p class="menu__link-text">
+                My Projects
+              </p>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link">
+              <p class="menu__link-text">
+                Contacts
+              </p>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    <div class="info">
+      <img class="info__img" src="./src/images/IMG_0950.JPG" alt="">
+      <div class="info__text">
+        <h1>Mona Andreeva</h1>
+        <h2>Front-end utvecklare</h2>
+        <h3><i class="bi bi-geo-fill"></i> Stockholm, Sweden</h3>
+      </div>
+    </div>
+
+
+
+  </header>
+
+
+  <main>
+    <div class="container">
+
+
+      <section class="skills" id="info">
+        <h2>Skills section</h2>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2>My projects</h2>
+        <div class="tabs__container">
+          <ul class="tabs">
+            <li class="tabs-item"><a id="tab1" href="" class="tabs-item__link">TO DO</a></li>
+            <li class="tabs-item"><a id="tab2" href="" class="tabs-item__link">CALCULATOR</a></li>
+            <li class="tabs-item"><a id="tab3" href="" class="tabs-item__link"> NEW PROJECT</a></li>
+          </ul>
+          <section class="tab-content__container">
+            <article class="tab-content" id="tab1-content">
+              <h2 class="tab-content__title">project 1</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit tempora dignissimos vitae quos
+                perferendis
+                consectetur aperiam dicta. Vitae inventore, iure labore voluptatem mollitia, a dolores laborum quisquam
+                recusandae in provident!</p>
+            </article>
+            <article class="tab-content" id="tab2-content">
+              <h2 class="tab-content__title">Project 2</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit tempora dignissimos vitae quos
+                perferendis
+                consectetur aperiam dicta. Vitae inventore, iure labore voluptatem mollitia, a dolores laborum quisquam
+                recusandae in provident!</p>
+            </article>
+            <article class="tab-content" id="tab3-content">
+              <h2 class="tab-content__title">project 3</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit tempora dignissimos vitae quos
+                perferendis
+                consectetur aperiam dicta. Vitae inventore, iure labore voluptatem mollitia, a dolores laborum quisquam
+                recusandae in provident!</p>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <h2>My contacts</h2>
+      </section>
+
+
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>

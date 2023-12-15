@@ -1,0 +1,25 @@
+// Mixins
+@import "variables";
+@mixin box-sizing {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+    @media screen and (min-width: $breakpoint-large-desktop) {
+      @content;
+    }
+  }
