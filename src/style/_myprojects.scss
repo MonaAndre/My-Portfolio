@@ -1,17 +1,18 @@
+
+section{
+  z-index: 1;
 .tabs__container {
-    @include tablet{
-       display: flex;
-  padding: 2rem;
-  margin: 1rem;
-  width: 100%;
-  max-width: 60rem;
-  min-width: 30rem;
-  height: 80vh;
-  border: 1px solid white;
-  border-radius: 3rem;
-  background-color: $primary-dark;  
-    }
- 
+  @include tablet {
+    display: flex;
+    padding: 1rem;
+    height: 400px;
+    width: 100%;
+   
+    border: 1px solid white;
+    border-radius: 3rem;
+    background-color: $primary-dark;
+  }
+
   .tabs {
     display: none;
     @include tablet {
@@ -25,12 +26,11 @@
     }
 
     &-item__link {
-        @include tablet{
-            position: relative;
-      text-decoration: none;
-      color: rgb(168, 164, 164);  
-        }
-    
+      @include tablet {
+        position: relative;
+        text-decoration: none;
+        color: rgb(168, 164, 164);
+      }
     }
     &-item__link:hover {
       color: white;
@@ -38,19 +38,20 @@
   }
 }
 .tab-content__container {
+  
   @include tablet {
-    padding: 0 2rem;
+    max-height: 300px;
     overflow-y: hidden;
     overflow-x: auto;
-    height: 300px;
     transition: all 0.45s ease-in-out;
   }
 
   .tab-content {
     @include tablet {
-      min-height: 100vh;
+      height: 100vh;
       overflow-x: auto;
       transition: all 0.45s ease-in-out;
+      z-index: 0;
     }
     &__title {
     }
@@ -58,4 +59,5 @@
     &__img {
     }
   }
+}
 }

@@ -10,8 +10,15 @@ body {
   font-size: clamp(1.125rem, 2vw, 1.25rem);
   color: white;
 }
+*{
+  @include box-sizing;
+}
 
-section {
+ul,ol{
+  @include box-sizing;
+}
+
+.section {
   min-height: 100vh;
 }
 header {
@@ -23,17 +30,16 @@ header {
     bottom: 0;
     width: 100%;
     color: rgb(174, 169, 169);
+    padding: 1rem;
     display: flex;
     flex-direction: row;
-    padding: 2rem;
     background-color: $primary-dark;
     @include tablet{
       position: static;
      
     }
     i {
-     
-      font-size: 3rem;
+      font-size: 2rem;
     }
     
     &__list {
@@ -46,13 +52,18 @@ header {
     }
     &__link {
       transition: all 0.3s ease;
+      text-decoration: none;
+      color: $primary-darkpink;
       &-text{
         display: none;
+        @include tablet{
+          display: inline;
+        }
 
       }
     }
     &__link:hover {
-      color: white;
+      color: $primary-lightpink;
     }
   }
   .info {
